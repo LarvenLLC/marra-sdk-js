@@ -2,8 +2,18 @@
   "name": "marra-sdk",
   "version": "1.0.0",
   "description": "Monorepo for the Marra JavaScript SDK",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": "./dist/index.js",
   "scripts": {
+    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +31,7 @@
     "axios": "^1.3.4"
   },
   "devDependencies": {
-    "eslint": "^8.36.0"
+    "eslint": "^8.36.0",
+    "microbundle-crl": "^0.13.11"
   }
 }
