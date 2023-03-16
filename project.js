@@ -1,11 +1,13 @@
+import axios from './api';
+
 /**
  * Get a single project
  * @param {Project['id'] | Project['reference']} identifier - The project identifier
  * @returns {Project}
  */
 export async function getProject(identifier) {
-  const {data} = await axios.get(`/project/${identifier}`);
-  return data;
+	const {data} = await axios.get(`/project/${identifier}`);
+	return data;
 }
 
 /**
@@ -14,8 +16,8 @@ export async function getProject(identifier) {
  * @returns {Project} - The added project
  */
 export async function createProject(project) {
-  await axios.post('/project', project);
-  return project;
+	await axios.post('/project', project);
+	return project;
 }
 
 /**
@@ -24,8 +26,8 @@ export async function createProject(project) {
  * @param {Returns} project
  */
 export async function updateProject(identifier, updates) {
-  await axios.patch(`/project/${identifier}`, updates);
-  return;
+	await axios.patch(`/project/${identifier}`, updates);
+	return;
 }
 
 /**
@@ -33,6 +35,6 @@ export async function updateProject(identifier, updates) {
  * @param {string} identifier - The project identifier
  */
 export async function deleteProject(identifier) {
-  await axios.delete(`/project/${identifier}`);
-  return;
+	await axios.delete(`/project/${identifier}`);
+	return;
 }
