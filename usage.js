@@ -1,4 +1,4 @@
-import axios from "./api";
+import axios from './api';
 
 /**
  * Get customer usage
@@ -6,12 +6,12 @@ import axios from "./api";
  * @returns {Usage[]}
  */
 export async function getUsageByCustomer(customerID) {
-  const {data} = await axios.get(`/usage`, {
-    params: {
-      customer_id: customerID
-    }
-  });
-  return data;
+	const {data} = await axios.get('/usage', {
+		params: {
+			customer_id: customerID
+		}
+	});
+	return data;
 }
 
 /**
@@ -20,6 +20,6 @@ export async function getUsageByCustomer(customerID) {
  * @returns {Usage} - The logged usage
  */
 export async function createUsage(usage) {
-  await axios.post('/usage', usage);
-  return usage;
+	await axios.post('/usage', usage);
+	return usage;
 }
