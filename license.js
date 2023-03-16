@@ -6,8 +6,8 @@ import axios from './api';
  * @returns {License}
  */
 export async function getLicense(identifier) {
-  const {data} = await axios.get(`/license/${identifier}`);
-  return data;
+	const {data} = await axios.get(`/license/${identifier}`);
+	return data;
 }
 
 /**
@@ -16,8 +16,8 @@ export async function getLicense(identifier) {
  * @returns {License} license - The created license
  */
 export async function createLicense(license) {
-  await axios.post('/license', license);
-  return license;
+	await axios.post('/license', license);
+	return license;
 }
 
 /**
@@ -26,8 +26,8 @@ export async function createLicense(license) {
  * @param {License} license
  */
 export async function updateLicense(identifier, updates) {
-  await axios.patch(`/license/${identifier}`, updates);
-  return;
+	await axios.patch(`/license/${identifier}`, updates);
+	return;
 }
 
 /**
@@ -35,6 +35,6 @@ export async function updateLicense(identifier, updates) {
  * @param {string} identifier - The license identifier
  */
 export async function deleteLicense(identifier) {
-  await axios.delete(`/license/${identifier}`);
-  return;
+	await axios.delete(`/license/${identifier}`);
+	return;
 }
