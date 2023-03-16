@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/LarvenLLC/marra-sdk-js.git"
   },
-  "author": "dev@larven.co.tz",
+  "author": "Larven <dev@larven.co.tz> (https://larven.co.tz/)",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/LarvenLLC/marra-sdk-js/issues"
