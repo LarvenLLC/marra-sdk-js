@@ -1,13 +1,13 @@
 /** @module Project **/
 
-import axios from '../api';
+const axios = require('./api');
 
 /**
  * Get a single project
  * @param {import('./types').Project['id'] | import('./types').Project['reference']} identifier - The project identifier
  * @returns {import('./types').Project}
  */
-export async function getProject(identifier) {
+async function getProject(identifier) {
 	const {data} = await axios.get(`/project/${identifier}`);
 	return data;
 }
@@ -17,7 +17,7 @@ export async function getProject(identifier) {
  * @param {Project} project
  * @returns {import('./types').Project} - The added project
  */
-export async function createProject(project) {
+async function createProject(project) {
 	await axios.post('/project', project);
 	return project;
 }
@@ -27,7 +27,7 @@ export async function createProject(project) {
  * @param {import('./types').Project} updates - The values to update
  * @param {import('./types').Project} project
  */
-export async function updateProject(identifier, updates) {
+async function updateProject(identifier, updates) {
 	await axios.patch(`/project/${identifier}`, updates);
 	return;
 }
@@ -36,7 +36,14 @@ export async function updateProject(identifier, updates) {
  * Delete a project
  * @param {string} identifier - The project identifier
  */
-export async function deleteProject(identifier) {
+async function deleteProject(identifier) {
 	await axios.delete(`/project/${identifier}`);
 	return;
 }
+
+module.exports = {
+	getProject,
+	createProject,
+	updateProject,
+	deleteProject,
+};
