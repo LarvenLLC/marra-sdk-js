@@ -1,1 +1,2 @@
-export default function getToken(clientID: any, clientSecret: any): Promise<any[]>;
+declare function _exports(clientID: any, clientSecret: any): Promise<any[]>;
+export = _exports;
