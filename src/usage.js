@@ -4,7 +4,7 @@ import axios from '../api';
 
 /**
  * Get customer usage
- * @param {Customer#id} customerID
+ * @param {import('./types').Customer['id']} customerID
  * @returns {Usage[]}
  */
 export async function getUsageByCustomer(customerID) {
@@ -18,8 +18,8 @@ export async function getUsageByCustomer(customerID) {
 
 /**
  * Log a usage
- * @param {Usage} usage
- * @returns {Usage} - The logged usage
+ * @param {import('./types').Usage} usage
+ * @returns {import('./types').Usage} - The logged usage
  */
 export async function createUsage(usage) {
 	await axios.post('/usage', usage);
