@@ -1,13 +1,13 @@
 /** @module License **/
 
-import axios from '../api';
+const axios = require('./api');
 
 /**
  * Get a single license
  * @param {import('./types').License['id'] | import('./types').License['reference']} identifier - The license identifier
  * @returns {import('./types').License}
  */
-export async function getLicense(identifier) {
+async function getLicense(identifier) {
 	const {data} = await axios.get(`/license/${identifier}`);
 	return data;
 }
@@ -17,7 +17,7 @@ export async function getLicense(identifier) {
  * @param {import('./types').License} license
  * @returns {import('./types').License} license - The created license
  */
-export async function createLicense(license) {
+async function createLicense(license) {
 	await axios.post('/license', license);
 	return license;
 }
@@ -27,7 +27,7 @@ export async function createLicense(license) {
  * @param {import('./types').License} updates - The values to update
  * @param {import('./types').License} license
  */
-export async function updateLicense(identifier, updates) {
+async function updateLicense(identifier, updates) {
 	await axios.patch(`/license/${identifier}`, updates);
 	return;
 }
@@ -36,7 +36,14 @@ export async function updateLicense(identifier, updates) {
  * Delete a license
  * @param {string} identifier - The license identifier
  */
-export async function deleteLicense(identifier) {
+async function deleteLicense(identifier) {
 	await axios.delete(`/license/${identifier}`);
 	return;
 }
+
+module.exports = {
+	getLicense,
+	createLicense,
+	updateLicense,
+	deleteLicense,
+};
