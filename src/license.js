@@ -4,8 +4,8 @@ import axios from '../api';
 
 /**
  * Get a single license
- * @param {License#id | License#reference} identifier - The license identifier
- * @returns {License}
+ * @param {import('./types').License['id'] | import('./types').License['reference']} identifier - The license identifier
+ * @returns {import('./types').License}
  */
 export async function getLicense(identifier) {
 	const {data} = await axios.get(`/license/${identifier}`);
@@ -14,8 +14,8 @@ export async function getLicense(identifier) {
 
 /**
  * Create a license
- * @param {License} license
- * @returns {License} license - The created license
+ * @param {import('./types').License} license
+ * @returns {import('./types').License} license - The created license
  */
 export async function createLicense(license) {
 	await axios.post('/license', license);
@@ -24,8 +24,8 @@ export async function createLicense(license) {
 
 /**
  * Update a license
- * @param {License} updates - The values to update
- * @param {License} license
+ * @param {import('./types').License} updates - The values to update
+ * @param {import('./types').License} license
  */
 export async function updateLicense(identifier, updates) {
 	await axios.patch(`/license/${identifier}`, updates);
