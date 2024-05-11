@@ -4,8 +4,8 @@ import axios from '../api';
 
 /**
  * Get a single project
- * @param {Project#id | Project#reference} identifier - The project identifier
- * @returns {Project}
+ * @param {import('./types').Project['id'] | import('./types').Project['reference']} identifier - The project identifier
+ * @returns {import('./types').Project}
  */
 export async function getProject(identifier) {
 	const {data} = await axios.get(`/project/${identifier}`);
@@ -15,7 +15,7 @@ export async function getProject(identifier) {
 /**
  * Add a project
  * @param {Project} project
- * @returns {Project} - The added project
+ * @returns {import('./types').Project} - The added project
  */
 export async function createProject(project) {
 	await axios.post('/project', project);
@@ -24,8 +24,8 @@ export async function createProject(project) {
 
 /**
  * Update a project
- * @param {Project} updates - The values to update
- * @param {Returns} project
+ * @param {import('./types').Project} updates - The values to update
+ * @param {import('./types').Project} project
  */
 export async function updateProject(identifier, updates) {
 	await axios.patch(`/project/${identifier}`, updates);
