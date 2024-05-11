@@ -79,4 +79,4 @@
  * @property {date} deleted_at
  */
 
-export {};
+module.exports = {};
