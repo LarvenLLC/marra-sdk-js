@@ -78,3 +78,5 @@
  * @property {date} updated_at
  * @property {date} deleted_at
  */
+
+export {};
