@@ -42,6 +42,8 @@ export function secureRequets(clientID, clientSecret) {
 		}
 		return Promise.reject(error);
 	});
+
+	return axios;
 }
 
 
