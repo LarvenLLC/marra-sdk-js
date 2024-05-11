@@ -1,8 +1,12 @@
+export = Marra;
 /**
  * Initialize Marra SDK
- * @param {import('./src/types').Config} configuration - Configuration with API keys to initialize SDK
+ * @param {import('./types').Config} configuration - Configuration with API keys to initialize SDK
  */
-export default function Marra({ clientID, clientSecret }: import('./src/types').Config): void;
-export * from "./src/license";
-export * from "./src/project";
-export * from "./src/usage";
+declare function Marra({ clientID, clientSecret }: import('./types').Config): void;
+declare namespace Marra {
+    export { license, project, usage };
+}
+import license = require("./license");
+import project = require("./project");
+import usage = require("./usage");
