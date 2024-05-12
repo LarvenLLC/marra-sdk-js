@@ -5,9 +5,6 @@ const axios = Axios.create({
 	baseURL: process.env.MARRA_API,
 });
 
-const clientID = process.env.MARRA_CLIENT_ID;
-const clientSecret = process.env.MARRA_CLIENT_SECRET;
-
 // Request interceptor for API calls
 axios.interceptors.request.use(
 	async config => {
@@ -17,7 +14,7 @@ axios.interceptors.request.use(
 			return config;
 		}
 
-		const [expiry, token] = await getToken(clientID, clientSecret);
+		const [expiry, token] = await getToken();
       
 		axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
 		axios.defaults.headers.common['expiry'] = expiry;
@@ -33,9 +30,9 @@ axios.interceptors.response.use((response) => {
 	return response;
 }, async function (error) {
 	const originalRequest = error.config;
-	if (error.response.status === 403 && !originalRequest._retry) {
+	if ((error.response.status === 401 || error.response.status === 403) && !originalRequest._retry) {
 		originalRequest._retry = true;
-		const [expiry, token] = await getToken(clientID, clientSecret);
+		const [expiry, token] = await getToken();
 		axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
 		axios.defaults.headers.common['expiry'] = expiry;
 		return axios(originalRequest);
