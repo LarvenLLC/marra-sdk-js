@@ -20,17 +20,24 @@ pnpm add marra
 ```
 
 ## Usage
-To use the Marra JS SDK in your project, you will need to require it and initialize it with your API key:
+To use the Marra JS SDK in your project, you will need to setup important env variables:
+
+```shell
+MARRA_API=https://api.marra.software
+MARRA_CLIENT_ID=XXXXX
+MARRA_CLIENT_SECRET=XXXXXXXXXX
+```
+
+Once you have setup the env variables, you can start using the provided functions to manage licenses, projects, and track usage.
 
 ```javascript
-const Marra = require('marra');
+const { licenses, projects, usages } = require('marra');
 
-Marra({
-  clientID: 'CLIENT_ID',
-  clientSecret: 'CLIENT_SECRET'
-});
+// licenses.getLicense('');
+// projects.getProject('');
+// usages.getUsageByCustomer('');
 ```
-Once you have initialized the SDK, you can start using the provided functions to manage licenses, projects, and track usage.
+require it and
 
 ## License Functions
 
