@@ -1,19 +1,11 @@
-const { secureRequets } = require('./api');
+const licenses = require('./license');
 
-/**
- * Initialize Marra SDK
- * @param {import('./types').Config} configuration - Configuration with API keys to initialize SDK
- */
-function Marra({ clientID, clientSecret }) {
-	secureRequets(clientID, clientSecret);
-}
-const myModule = module.exports = Marra;
+const projects = require('./project');
 
-const license = require('./license');
-myModule.license = license;
+const usages = require('./usage');
 
-const project = require('./project');
-myModule.project = project;
-
-const usage = require('./usage');
-myModule.usage = usage;
+module.exports = {
+	licenses,
+	projects,
+	usages,
+};
