@@ -1,2 +1,2 @@
-declare function _exports(clientID: any, clientSecret: any): Promise<any[]>;
+declare function _exports(): Promise<any[]>;
 export = _exports;
