@@ -7,31 +7,31 @@ export type License = {
     client_id: string;
     client_secret: string;
     project_id: string;
-    expiration_date: date;
+    expiration_date: Date;
     active: boolean;
     reference: string;
-    created_at: date;
-    updated_at: date;
-    deleted_at: date;
+    created_at: Date;
+    updated_at: Date;
+    deleted_at: Date;
 };
 export type Usage = {
     id: number;
     license_id: string;
     product_id: string;
-    started_at: date;
-    ended_at: date;
+    started_at: Date;
+    ended_at: Date;
     reference: string;
-    created_at: date;
-    updated_at: date;
-    deleted_at: date;
+    created_at: Date;
+    updated_at: Date;
+    deleted_at: Date;
 };
 export type Product = {
     id: number;
     name: string;
     reference: string;
-    created_at: date;
-    updated_at: date;
-    deleted_at: date;
+    created_at: Date;
+    updated_at: Date;
+    deleted_at: Date;
 };
 export type Service = {
     id: number;
@@ -39,9 +39,9 @@ export type Service = {
     name: string;
     code: string;
     reference: string;
-    created_at: date;
-    updated_at: date;
-    deleted_at: date;
+    created_at: Date;
+    updated_at: Date;
+    deleted_at: Date;
 };
 /**
  * Customer project
@@ -53,9 +53,9 @@ export type Project = {
     customer_id: string;
     product_id: string;
     reference: string;
-    created_at: date;
-    updated_at: date;
-    deleted_at: date;
+    created_at: Date;
+    updated_at: Date;
+    deleted_at: Date;
 };
 export type Customer = {
     id: number;
@@ -64,7 +64,7 @@ export type Customer = {
     phone: string;
     email: string;
     reference: string;
-    created_at: date;
-    updated_at: date;
-    deleted_at: date;
+    created_at: Date;
+    updated_at: Date;
+    deleted_at: Date;
 };
