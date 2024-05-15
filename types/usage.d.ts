@@ -1,11 +1,11 @@
 /**
- * Get customer usage
+ * @function getUsageByCustomer Get customer usage
  * @param {import('./types').Customer['id']} customerID
  * @returns {Usage[]}
  */
 export function getUsageByCustomer(customerID: import('./types').Customer['id']): Usage[];
 /**
- * Log a usage
+ * @function createUsage Log a usage
  * @param {import('./types').Usage} usage
  * @returns {import('./types').Usage} - The logged usage
  */
