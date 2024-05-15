@@ -3,7 +3,7 @@
 const axios = require('./api');
 
 /**
- * Get a single project
+ * @function getProject Get a single project
  * @param {import('./types').Project['id'] | import('./types').Project['reference']} identifier - The project identifier
  * @returns {import('./types').Project}
  */
@@ -13,7 +13,7 @@ async function getProject(identifier) {
 }
 
 /**
- * Add a project
+ * @function createProject Add a project
  * @param {Project} project
  * @returns {import('./types').Project} - The added project
  */
@@ -23,7 +23,7 @@ async function createProject(project) {
 }
 
 /**
- * Update a project
+ * @function updateProject Update a project
  * @param {import('./types').Project} updates - The values to update
  * @param {import('./types').Project} project
  */
@@ -33,7 +33,7 @@ async function updateProject(identifier, updates) {
 }
 
 /**
- * Delete a project
+ * @function deleteProject Delete a project
  * @param {string} identifier - The project identifier
  */
 async function deleteProject(identifier) {
