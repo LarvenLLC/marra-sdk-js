@@ -3,7 +3,7 @@
 const axios = require('./api');
 
 /**
- * Get a single customer
+ * @function getCustomer Get a single customer
  * @param {import('./types').Customer['id'] | import('./types').Customer['reference']} identifier - The customer identifier
  * @returns {import('./types').Customer}
  */
@@ -13,7 +13,7 @@ async function getCustomer(identifier) {
 }
 
 /**
- * Get many customers
+ * @function getCustomers Get many customers
  * @returns {import('./types').Customer[]}
  */
 async function getCustomers() {
@@ -22,7 +22,7 @@ async function getCustomers() {
 }
 
 /**
- * Create a customer
+ * @function createCustomer Create a customer
  * @param {import('./types').Customer} customer
  * @returns {import('./types').Customer} - The created customer
  */
@@ -32,7 +32,7 @@ async function createCustomer(customer) {
 }
 
 /**
- * Update a customer
+ * @function updateCustomer Update a customer
  * @param {import('./types').Customer} updates - The values to update
  * @param {import('./types').Customer} customer
  */
@@ -42,7 +42,7 @@ async function updateCustomer(identifier, updates) {
 }
 
 /**
- * Delete a customer
+ * @function deleteCustomer Delete a customer
  * @param {string} identifier - The customer identifier
  */
 async function deleteCustomer(identifier) {
