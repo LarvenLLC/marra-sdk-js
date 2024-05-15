@@ -10,12 +10,12 @@
  * @property {string} client_id
  * @property {string} client_secret
  * @property {string} project_id
- * @property {date} expiration_date
+ * @property {Date} expiration_date
  * @property {boolean} active
  * @property {string} reference
- * @property {date} created_at
- * @property {date} updated_at
- * @property {date} deleted_at
+ * @property {Date} created_at
+ * @property {Date} updated_at
+ * @property {Date} deleted_at
  */
 
 /**
@@ -23,12 +23,12 @@
  * @property {number} id
  * @property {string} license_id
  * @property {string} product_id
- * @property {date} started_at
- * @property {date} ended_at
+ * @property {Date} started_at
+ * @property {Date} ended_at
  * @property {string} reference
- * @property {date} created_at
- * @property {date} updated_at
- * @property {date} deleted_at
+ * @property {Date} created_at
+ * @property {Date} updated_at
+ * @property {Date} deleted_at
  */
 
 /**
@@ -36,9 +36,9 @@
  * @property {number} id
  * @property {string} name
  * @property {string} reference
- * @property {date} created_at
- * @property {date} updated_at
- * @property {date} deleted_at
+ * @property {Date} created_at
+ * @property {Date} updated_at
+ * @property {Date} deleted_at
  */
 
 /**
@@ -48,9 +48,9 @@
  * @property {string} name
  * @property {string} code
  * @property {string} reference
- * @property {date} created_at
- * @property {date} updated_at
- * @property {date} deleted_at
+ * @property {Date} created_at
+ * @property {Date} updated_at
+ * @property {Date} deleted_at
  */
 
 /**
@@ -61,9 +61,9 @@
  * @property {string} customer_id
  * @property {string} product_id
  * @property {string} reference
- * @property {date} created_at
- * @property {date} updated_at
- * @property {date} deleted_at
+ * @property {Date} created_at
+ * @property {Date} updated_at
+ * @property {Date} deleted_at
  */
 
 /**
@@ -74,9 +74,9 @@
  * @property {string} phone
  * @property {string} email
  * @property {string} reference
- * @property {date} created_at
- * @property {date} updated_at
- * @property {date} deleted_at
+ * @property {Date} created_at
+ * @property {Date} updated_at
+ * @property {Date} deleted_at
  */
 
 module.exports = {};
