@@ -15,7 +15,7 @@ axios.interceptors.request.use(
 		}
 
 		const [expiry, token] = await getToken();
-    console.log(process.env.MARRA_API, token);
+
 		axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
 		axios.defaults.headers.common['expiry'] = expiry;
 
