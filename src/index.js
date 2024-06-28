@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 /**
  * @typedef Customers
  * @property {import('./customer')['createCustomer']} createCustomer
