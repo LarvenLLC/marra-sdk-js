@@ -18,8 +18,8 @@ async function getLicense(identifier) {
  * @returns {import('./types').License} license - The created license
  */
 async function createLicense(license) {
-	await axios.post('/license', license);
-	return license;
+	const {data} = await axios.post('/license', license);
+	return data;
 }
 
 /**
