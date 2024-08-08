@@ -18,8 +18,8 @@ async function getProject(identifier) {
  * @returns {import('./types').Project} - The added project
  */
 async function createProject(project) {
-	await axios.post('/project', project);
-	return project;
+	const {data} = await axios.post('/project', project);
+	return data;
 }
 
 /**
