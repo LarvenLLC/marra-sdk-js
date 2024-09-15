@@ -1,6 +1,6 @@
 {
   "name": "marra",
-  "version": "2.0.7-beta",
+  "version": "2.0.0",
   "description": "Monorepo for the Marra JavaScript SDK",
   "source": "src/*",
   "main": "dist/index.js",

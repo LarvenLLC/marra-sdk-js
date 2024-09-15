@@ -13,6 +13,16 @@ async function getLicense(identifier) {
 }
 
 /**
+ * @function getLicense Get licenses associated with project
+ * @param {string|number} projectId - The project ID
+ * @returns {import('./types').License}
+ */
+async function getLicensesByProject(projectId) {
+	const {data} = await axios.get(`/license/project/${projectId}`);
+	return data;
+}
+
+/**
  * @function createLicense Create a license
  * @param {import('./types').License} license
  * @returns {import('./types').License} license - The created license
