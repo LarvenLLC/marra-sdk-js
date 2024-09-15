@@ -15,6 +15,7 @@ const customers = require('./customer');
  * @typedef Licenses
  * @property {import('./license')['createLicense']} createLicense
  * @property {import('./license')['getLicense']} getLicense
+ * @property {import('./license')['getLicensesByProject']} getLicensesByProject
  * @property {import('./license')['updateLicense']} updateLicense
  * @property {import('./license')['deleteLicense']} deleteLicense
  */

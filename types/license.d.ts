@@ -5,6 +5,12 @@
  */
 export function getLicense(identifier: import('./types').License['id'] | import('./types').License['reference']): import('./types').License;
 /**
+ * @function getLicense Get licenses associated with project
+ * @param {string|number} projectId - The project ID
+ * @returns {import('./types').License}
+ */
+export function getLicensesByProject(projectId: string | number): import('./types').License;
+/**
  * @function createLicense Create a license
  * @param {import('./types').License} license
  * @returns {import('./types').License} license - The created license

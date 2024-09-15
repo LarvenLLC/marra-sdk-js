@@ -8,6 +8,7 @@ export type Customers = {
 export type Licenses = {
     createLicense: typeof import("./license")['createLicense'];
     getLicense: typeof import("./license")['getLicense'];
+    getLicensesByProject: typeof import("./license")['getLicensesByProject'];
     updateLicense: typeof import("./license")['updateLicense'];
     deleteLicense: typeof import("./license")['deleteLicense'];
 };
@@ -35,6 +36,7 @@ export const customers: Customers;
  * @typedef Licenses
  * @property {import('./license')['createLicense']} createLicense
  * @property {import('./license')['getLicense']} getLicense
+ * @property {import('./license')['getLicensesByProject']} getLicensesByProject
  * @property {import('./license')['updateLicense']} updateLicense
  * @property {import('./license')['deleteLicense']} deleteLicense
  */

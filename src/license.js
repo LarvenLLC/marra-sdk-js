@@ -53,6 +53,7 @@ async function deleteLicense(identifier) {
 
 module.exports = {
 	getLicense,
+	getLicensesByProject,
 	createLicense,
 	updateLicense,
 	deleteLicense,
