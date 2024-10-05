@@ -10,6 +10,8 @@
  * @property {string} client_id
  * @property {string} client_secret
  * @property {string} project_id
+ * @property {string} service_id
+ * @property {string} service_code
  * @property {Date} expiration_date
  * @property {boolean} active
  * @property {string} reference
